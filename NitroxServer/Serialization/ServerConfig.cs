@@ -1,4 +1,4 @@
-﻿using NitroxModel.DataStructures.GameLogic;
+using NitroxModel.DataStructures.GameLogic;
 using NitroxModel.Helper;
 using NitroxModel.Serialization;
 using NitroxModel.Server;
@@ -14,6 +14,9 @@ namespace NitroxServer.Serialization
 
         [PropertyDescription("Set to true to Cache entities for the whole map on next run. \nWARNING! Will make server load take longer on the cache run but players will gain a performance boost when entering new areas.")]
         public bool CreateFullEntityCache = false;
+
+        [PropertyDescription("Wether a starting stuff shoud be given to players (Seaglide, laser cutter, welder, builder, fins, knife)")]
+        public bool StartingGear = false;
 
         private int saveIntervalSetting = 120000;
 
