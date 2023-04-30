@@ -1,4 +1,4 @@
-﻿using NitroxModel.DataStructures.GameLogic;
+using NitroxModel.DataStructures.GameLogic;
 using NitroxModel.Helper;
 using NitroxModel.Serialization;
 using NitroxModel.Server;
@@ -114,5 +114,12 @@ namespace NitroxServer.Serialization
         public bool AutoPortForward { get; set; } = true;
         [PropertyDescription("Determines whether the server will listen for and reply to LAN discovery requests.")]
         public bool LANDiscoveryEnabled { get; set; } = true;
+
+        [PropertyDescription("Wether breakable resources, such as limestones, galena, but also coral disks, and other, should be shared between players. Improves immersion.")]
+        public bool BreakableResourcesShared { get; set; } = true;
+        [PropertyDescription("Wether resources should be saved for each player, or if they can respawn after a disconnection at cost of a little of storage. Can slightly decrease performance on weakest configurations")]
+        public bool SaveBrokenResourcesPerPlayer { get; set; } = false;
+        [PropertyDescription("Disabled if 0. Minimum value is 60. Delay in seconds for a breakable resource to respawn. Recommended for big servers. Can slightly decrease performances on weakest configurations.")]
+        public int BreakableResourcesRespawnDelay { get; set; } = 900;
     }
 }
