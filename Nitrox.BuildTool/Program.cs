@@ -24,7 +24,7 @@ namespace Nitrox.BuildTool
 
 #if BELOWZERO
         private const int LEGACY_BRANCH_SUBNAUTICA_VERSION = 49370;
-#else
+#elif SUBNAUTICA
         private const int LEGACY_BRANCH_SUBNAUTICA_VERSION = 68598;
 #endif
 
